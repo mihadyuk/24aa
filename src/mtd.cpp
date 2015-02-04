@@ -35,6 +35,8 @@ namespace nvram {
  */
 #if defined(SAM7_PLATFORM)
 #define EEPROM_I2C_CLOCK (MCK / (((this->cfg->i2cp->config->cwgr & 0xFF) + ((this->cfg->i2cp->config->cwgr >> 8) & 0xFF)) * (1 << ((this->cfg->i2cp->config->cwgr >> 16) & 7)) + 6))
+#elif defined(STM32F071xB)
+#define EEPROM_I2C_CLOCK (400000L)
 #else
 #define EEPROM_I2C_CLOCK (this->cfg->i2cp->config->clock_speed)
 #endif
