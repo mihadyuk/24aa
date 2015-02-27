@@ -26,7 +26,7 @@
 #include "nvram_file.hpp"
 
 #if !defined(NVRAM_FS_MAX_FILE_NAME_LEN)
-#define NVRAM_FS_MAX_FILE_NAME_LEN        8
+#define NVRAM_FS_MAX_FILE_NAME_LEN        16
 #endif
 
 #if !defined(NVRAM_FS_MAX_FILE_CNT)
