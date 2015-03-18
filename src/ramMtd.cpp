@@ -60,6 +60,10 @@ size_t RamMtd::capacity(void) {
   return m_storageSize;
 }
 
+void RamMtd::wait_for_sync() {
+
+}
+
 
 
 } /* namespace nvram_fs */

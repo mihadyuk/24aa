@@ -22,6 +22,8 @@ namespace nvram {
   private:
     uint8_t *m_bufferStorage = nullptr;
     size_t m_storageSize     = 0;
+  protected:
+    void wait_for_sync(void) override;
   };
 
 } /* namespace nvram_fs */
