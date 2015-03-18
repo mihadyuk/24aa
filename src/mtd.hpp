@@ -70,7 +70,7 @@ typedef struct {
 class Mtd {
 public:
   Mtd(const MtdConfig *cfg);
-  msg_t read(uint8_t *data, size_t len, size_t offset);
+  virtual msg_t read(uint8_t *data, size_t len, size_t offset);
 #if NVRAM_FS_USE_DELETE_AND_RESIZE
   msg_t move_right(size_t len, size_t blkstart, size_t shift);
   msg_t move_left(size_t len, size_t blkstart, size_t shift);
