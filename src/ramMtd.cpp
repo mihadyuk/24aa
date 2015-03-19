@@ -16,7 +16,9 @@ RamMtd::RamMtd(uint8_t *bufferStorage, size_t storageSize) :
     m_storageSize(storageSize)
 {
   // TODO Auto-generated constructor stub
-
+  osalDbgAssert(m_bufferStorage != nullptr, "null bufferstorage");
+  if (m_bufferStorage)
+    memset(m_bufferStorage, 0xFF, storageSize);
 }
 
 RamMtd::~RamMtd() {
